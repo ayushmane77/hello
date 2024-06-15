@@ -35,7 +35,74 @@ public class sieveOfEratosthenes {
     // }
 
     // time complexity =  O(n*n^1/2)
+// -------------------------------------------------------------------
+    // public static boolean isPrime(int m){
+    //     for(int i=2;i*i<=m;i++){
+    //         if(m%i==0){
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
 
+    // public static void sieve(int n){
+    //     boolean isprime[]=new boolean[n+1];
+    //     Arrays.fill(isprime, true);
+    //     for(int i=2;i*i<=n;i++){
+    //         if(isPrime(i)){
+    //             for(int j=2*i;j<=n;j=j+i){
+    //                 isprime[j]=false;
+    //             }
+    //         }
+    //     }
+    //     for(int i=2;i<=n;i++){
+    //         if(isprime[i]){
+    //             System.out.println(i);
+    //         }
+    //     }
+    // }
+
+    // public static void main(String[] args) {
+    //     Scanner sc=new Scanner(System.in);
+    //     System.out.println("enter any number");
+    //     int n=sc.nextInt();
+    //     sieve(n);
+    //     sc.close();
+    // }
+// ----------------------------------------------------------------------
+    // public static boolean isPrime(int m){
+    //     for(int i=2;i*i<=m;i++){
+    //         if(m%i==0){
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+    // public static void printPrime(int n){
+    //     boolean Array[]=new boolean[n+1];
+    //     Arrays.fill(Array, true);
+    //     for(int i=2;i<=n;i++){
+    //         if(isPrime(i)){
+    //             for(int j=i*i;j<=n;j=j+i){
+    //                 Array[j]=false;
+    //             }
+    //         }
+    //     }
+    //     for(int i=2;i<=n;i++){
+    //         if(Array[i]){
+    //             System.out.println(i);
+    //         }
+    //     }
+    // }
+    // public static void main(String[] args){
+    //     Scanner sc=new Scanner(System.in);
+    //     System.out.println("enter a number");
+    //     int n=sc.nextInt();
+    //     printPrime(n);
+    //     sc.close();
+    // }
+
+// ------------------------------------------------------------------------
     public static boolean isPrime(int m){
         for(int i=2;i*i<=m;i++){
             if(m%i==0){
@@ -44,29 +111,23 @@ public class sieveOfEratosthenes {
         }
         return true;
     }
-
-    public static void sieve(int n){
-        boolean isprime[]=new boolean[n+1];
-        Arrays.fill(isprime, true);
-        for(int i=2;i*i<=n;i++){
+    public static void printPrime(int n){
+        boolean arr[]=new boolean[n+1];
+        Arrays.fill(arr, true);
+        for(int i=2;i<=n;i++){
             if(isPrime(i)){
-                for(int j=2*i;j<=n;j=j+i){
-                    isprime[j]=false;
+                System.out.println(i);
+                for(int j=i*i;j<=n;j=j+i){
+                    arr[j]=false;
                 }
             }
         }
-        for(int i=2;i<=n;i++){
-            if(isprime[i]){
-                System.out.println(i);
-            }
-        }
     }
-
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("enter any number");
-        int n=sc.nextInt();
-        sieve(n);
+        System.out.println("enter a number");
+        int n= sc.nextInt();
+        printPrime(n);
         sc.close();
     }
 }
