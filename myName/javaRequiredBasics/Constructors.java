@@ -49,7 +49,8 @@ class Complex{
     //                     // So final output is 0 + 0i
     // }
 
-    public Complex(int real){
+    public Complex(int real){  // A constructor can be overloaded but the arguments or 
+                              // data type should differ.
         a=real;
         b=12;
     }
