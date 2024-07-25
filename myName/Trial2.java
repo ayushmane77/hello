@@ -1,5 +1,6 @@
 package myName;
 
+import myName.javaRequiredBasics.ProtectedUse;
 import myName.javaRequiredBasics.Trial;
 
 public class Trial2 {
@@ -16,6 +17,18 @@ public class Trial2 {
         // in differnt package. 
         obj.method2();
         // obj.method3(); not accessible because it is default 
+        ProtectedUse obj1=new ProtectedUse();
+        obj1.number=18; // only public members are accessible 
 
+        // cannot access the protected variable named "parent"
+        // from 'ProtectedUse' class
+    }
+}
+class This extends ProtectedUse{
+    public static void main(String[] args) {
+        This obj3=new This();
+        obj3.number=56; 
+        obj3.parent="Ayush Mane";
+        // obj3.number1=23; //cannot acess default members
     }
 }

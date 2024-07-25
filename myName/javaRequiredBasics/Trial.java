@@ -74,6 +74,9 @@ public class Trial {
         // method4(); // a function or method when called like this is static
         // method();
         // obj1.println3(); cannot call this println3() method which is private 
-        
+        ProtectedUse obj4=new ProtectedUse();
+        obj4.parent="Ayush"; // can access the protected variable
+        // present in the 'ProtectedUse' class because it still belongs 
+        // to the same package and not of inherited class.
     }
 }
