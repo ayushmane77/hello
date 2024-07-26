@@ -31,4 +31,20 @@ public class file {
     public int getId(){                // setter methods
         return id;
     }
+
+    public static void main(String[] args) {
+        StaticUse.num=89;
+        System.out.println(StaticUse.num);
+        
+        System.out.println(StaticUse.num2);
+        // StaticUse.random="xyz"; cannot access a non static variable outside of 
+        // class by invoking by its class name 
+        StaticUse.printNumbers2();
+        StaticUse.printNumbers3();
+        // StaticUse.printHello(); ERROR// cannot access a non static method without
+        // creating an object.
+        StaticUse obj=new StaticUse();
+        obj.printHello(); // need to create an object to invoke a non static method
+
+    }
 }
