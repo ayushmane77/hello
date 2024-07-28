@@ -39,11 +39,11 @@ public class strings {
         Scanner sc=new Scanner(System.in);
         String fullName=new String("Tony stark");
         for(int i=0;i<fullName.length();i++){
-            System.out.println(fullName.charAt(i));
+            System.out.print(fullName.charAt(i));
         }
 
-
-        boolean response=fullName.equals("tony stark")?true:false;
+        System.out.println();
+        boolean response=fullName.equals("Tony stark")?true:false;
         System.out.println(response);
         sc.close();
 

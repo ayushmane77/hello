@@ -30,18 +30,31 @@ public class homework4 {
         // alternate way without using inbuild functions
 
     Scanner sc=new Scanner(System.in);
-    System.out.println("enter a string");
+    // System.out.println("enter a string");
+    // String str=sc.nextLine();
+    // String result="";
+    // for(int i=0;i<str.length();i++){
+    //     if(str.charAt(i)=='e'){
+    //         result=result+'i';
+    //     }
+    //     else{
+    //         result=result+str.charAt(i);
+    //     }
+    // }
+    // System.out.println(result);
+
+
+    // reverse the string
+    System.out.println("enter any string");
     String str=sc.nextLine();
-    String result="";
-    for(int i=0;i<str.length();i++){
-        if(str.charAt(i)=='e'){
-            result=result+'i';
-        }
-        else{
-            result=result+str.charAt(i);
-        }
+    int length=str.length();
+    System.out.println(length);
+    String res="";
+
+    for(int i=length-1;i>=0;i--){
+        res=res+str.charAt(i);
     }
-    System.out.println(result);
+    System.out.println(res);
 
     sc.close();    
 
