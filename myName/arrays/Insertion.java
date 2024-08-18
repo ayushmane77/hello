@@ -2,12 +2,12 @@ package myName.arrays;
 import java.util.Scanner;
 public class Insertion {
 
-    public static int[] insertElement(int arr[],int n,int x,int pos,int capacity){
-        if(n==capacity){
+    public static int[] insertElement(int arr[],int n,int x,int pos){
+        if(n==arr.length){
             return arr;
         }
         int index=pos-1;
-        for(int j=capacity-1;j>=index;j--){
+        for(int j=n-1;j>=index;j--){
             arr[j+1]=arr[j];
         }
         // for(int j=index;j<n-1;j++){
@@ -22,7 +22,7 @@ public class Insertion {
         System.out.println("enter the size of the array");
         int n=sc.nextInt();
         System.out.println("enter the elements inside an array");
-        int arr[]=new int[n];
+        int arr[]=new int[n+1];
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
@@ -30,17 +30,12 @@ public class Insertion {
         int x=sc.nextInt();
         System.out.println("enter the position of " + x);
         int pos=sc.nextInt();
-        int capacity=0;
-        for(int i=0;i<n;i++){
-            if(arr[i]!=0){
-                capacity++;
-            }
-        }
+        
         if(pos>n){
             System.out.println("enter a valid position for array size " + n);
         }
         else{
-            int res[]=insertElement(arr,n,x,pos,capacity);
+            int res[]=insertElement(arr,n,x,pos);
             for(int i=0;i<n;i++){
                 System.out.println(res[i]);
             }
