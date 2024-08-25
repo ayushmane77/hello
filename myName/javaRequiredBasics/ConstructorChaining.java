@@ -1,5 +1,16 @@
 package myName.javaRequiredBasics;
 
+// Constructor chaining in Java refers to the process of calling one constructor from another constructor within the same class or from a subclass. This is typically done to avoid code duplication and to ensure that common initialization code is only written once.
+
+// Types of Constructor Chaining:
+// Within the Same Class (Using this()):
+
+// A constructor can call another constructor in the same class using the this() keyword.
+// This is useful for setting default values or performing a series of initializations.
+// From a Subclass (Using super()):
+
+// A constructor in a subclass can call a constructor in its superclass using the super() keyword.
+// This ensures that the superclass's constructor is executed before the subclass's constructor.
 class Person{
     int age;
     String name;

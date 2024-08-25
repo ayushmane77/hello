@@ -38,10 +38,13 @@ class subclass extends ParentClass{
         // variable is defined with "final" keyword 
        System.out.println(num2); // 5 this is because we are still refering
        // to the num2 variable of ParentClass
+       object.printMessage();
     }   
+
 }
 
 final class ABC{
+    final int day=7;
     public void PrintTheMessage(){
         System.out.println("this is a final class and " + 
         "cannot be inherited");
@@ -55,10 +58,17 @@ final class ABC{
 //     with "final" keyword to prevent inheritence
 
 
+
+
 public class FinalKeyword {
     public static void main(String[] args) {
         subclass Subclass=new subclass();
         Subclass.print();
         Subclass.printing("Ayush");
+
+        ABC obj=new ABC();
+        obj.PrintTheMessage();
+        // obj.day=9;
+        System.out.println(obj.day);
     }
 }
