@@ -112,5 +112,5 @@ public class Trial {
         obj4.parent="Ayush"; // can access the protected variable
         // present in the 'ProtectedUse' class because it still belongs 
         // to the same package and not of inherited class.
-    }
+    }  
 }

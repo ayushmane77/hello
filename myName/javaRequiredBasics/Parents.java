@@ -23,9 +23,11 @@ public class Parents {
 
     protected String vehicle;
 
+    private double pie=3.14;
     public Parents(String VehicleName){
         this.vehicle=VehicleName;
         System.out.println(vehicle + "is running in parent class constructor");
+        System.out.println(pie);
     }
     public Parents(){
         System.out.println("this is parent class constructor");

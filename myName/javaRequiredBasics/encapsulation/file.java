@@ -16,11 +16,12 @@ public class file {
     // fields and methods together. This can be used to achieve data 
     // hiding. Encapsulationd in itself is not data hiding.
 
-    private int accountNumber;  // private members
+    private  int accountNumber;  // private members
     private int id;             // private members
 
     public void setAccountNumber(int accNum){  // getters methods
         this.accountNumber=accNum;
+        // accountNumber=accNum; can also be accessed like this only when variable "accountNumber" is static
     }
     public void setId(int id){          // getter methods
         this.id=id;
