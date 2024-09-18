@@ -19,53 +19,55 @@ public class LongestEvenOddSubArray {
 
     // BETTER APPROACH
     
-    // public static int lengthOfMaximumEvenOddSubarray(int arr[]){
-    //     int length=1;
-    //     int maxlength=1;
-    //     for(int i=1;i<arr.length;i++){
-    //         if(arr[i]%2==0 && arr[i-1]%2!=0 || arr[i]%2!=0 && arr[i-1]%2==0){
-    //             length++;
-    //         }  // [5,10,20,6,3,8]    
-    //         else{
-    //             length=1;
-    //         }
-    //         maxlength=Math.max(maxlength, length);
-    //     }
-    //     return maxlength;
-    // }
-
     public static int lengthOfMaximumEvenOddSubarray(int arr[]){
-        int Max=1;
-        int count;
-        int j;
+        int length=1;
+        int maxlength=1;
         for(int i=1;i<arr.length;i++){
-            count=1;
-            j=i;
-            if(arr[i]%2==0){
-                while((arr[i-1]%2!=0 && arr[i]%2==0) || (arr[i-1]%2==0  && arr[i]%2!=0)){
-                    count++;
-                    i++;
-                    if(i==arr.length){
-                        break;
-                    }
-                }
-            }
+            if(arr[i]%2==0 && arr[i-1]%2!=0 || arr[i]%2!=0 && arr[i-1]%2==0){
+                length++;
+            }  // [5,10,20,6,3,8]    
             else{
-                while((arr[i-1]%2==0 && arr[i]%2!=0) || (arr[i]%2==0 && arr[i-1]%2!=0)){
-                    count++;
-                    i++;
-                    if(i==arr.length){
-                        break;
-                    }
-                }
+                length=1;
             }
-            Max=Math.max(Max,count);
-            count=1;
-            i=j;
-            
+            maxlength=Math.max(maxlength, length);
         }
-        return Max;
+        return maxlength;
     }
+
+    // public static int lengthOfMaximumEvenOddSubarray(int arr[]){
+    //     int Max=1;
+    //     int count;
+    //     int j;
+    //     for(int i=1;i<arr.length;i++){
+    //         count=1;
+    //         j=i;
+    //         if(arr[i]%2==0){
+    //             while((arr[i-1]%2!=0 && arr[i]%2==0) || (arr[i-1]%2==0  && arr[i]%2!=0)){
+    //                 count++;
+    //                 i++;
+    //                 if(i==arr.length){
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //         else{
+    //             while((arr[i-1]%2==0 && arr[i]%2!=0) || (arr[i]%2==0 && arr[i-1]%2!=0)){
+    //                 count++;
+    //                 i++;
+    //                 if(i==arr.length){
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //         Max=Math.max(Max,count);
+    //         count=1;
+    //         i=j;
+            
+    //     }
+    //     return Max;
+
+    //     // time complexity - O(n)
+    // }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the size of array");
