@@ -22,6 +22,28 @@ public class MaximumConsecutive1 {
         }
         return maxCount;
     }
+// ---------------------------------------------------------------
+    // naive approach
+
+        // public static int findMaximumConsecutive1(int arr[]){
+        //     int max=0;
+        //     int current;
+        //     for(int i=0;i<arr.length;i++){
+        //         current=0;
+        //         for(int j=i;j<arr.length;j++){
+        //             if(arr[j]==1){
+        //                 current++;
+        //                 max=Math.max(max,current); // this can also work 
+        //             }
+        //             else{
+        //                 break;
+        //             }
+        //         }
+        //         // max=Math.max(max,current); // as well as this
+        //     }
+        //     return max;
+        // }
+    // }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the size of array");
