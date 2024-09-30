@@ -2,20 +2,46 @@ package myName.arrays;
 import java.util.Scanner;
 public class MajorityElement {
 
+    // public static int majorityElement(int arr[]){
+    //     // [3,8,4,8,8]
+    //     if(arr.length==1){
+    //         return 0;
+    //     }
+    //     for(int i=0;i<arr.length;i++){
+    //         int count=1;
+    //         for(int j=i+1;j<arr.length;j++){
+    //             if(arr[i]==arr[j]){
+    //                 count++;
+    //             }
+    //             if(count>arr.length/2){
+    //                 return i;
+    //             }
+    //         }
+    //     }
+    //     return -1;
+    // }
+
     public static int majorityElement(int arr[]){
-        // [3,8,4,8,8]
-        if(arr.length==1){
-            return 0;
+        int count=1;
+        int res=0;
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]==arr[res]){
+                count++;
+            }
+            else{
+                count--;
+            }
+            if(count==0){
+                res=i;
+            }
         }
+        int count2=0;
         for(int i=0;i<arr.length;i++){
-            int count=1;
-            for(int j=i+1;j<arr.length;j++){
-                if(arr[i]==arr[j]){
-                    count++;
-                }
-                if(count>arr.length/2){
-                    return i;
-                }
+            if(arr[i]==arr[res]){
+                count2++;
+            }
+            if(count2>arr.length/2){
+                return arr[res];
             }
         }
         return -1;
