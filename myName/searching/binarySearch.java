@@ -21,7 +21,7 @@ public class binarySearch {
     //     return -1;
     // }
 
-    // Time complexity :O(N);
+    // Time complexity :O(logN);
     // Auxiliary space : O(1);
 
     // ---------------------------------------------------
@@ -44,8 +44,8 @@ public class binarySearch {
         }
         
     }
-    //  Time complexity : O(N);
-    //  Auxiliary space : O(N);
+    //  Time complexity : O(logN);
+    //  Auxiliary space : O(logN);
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the size of array");
