@@ -2,23 +2,44 @@ package myName.searching;
 import java.util.Scanner;
 public class TripletSum {
 
+    // public static boolean findTripletSum(int arr[],int sum){
+    //     for(int i=0;i<arr.length-2;i++){
+    //         int currentSum=0;
+    //         for(int j=i+1;j<arr.length-1;j++){
+    //             for(int k=j+1;k<arr.length;k++){
+    //                 currentSum=currentSum+arr[i]+arr[j]+arr[k];
+    //                 if(currentSum==sum){
+    //                     return true;
+    //                 }
+    //                 else{
+    //                     currentSum=0;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     return false;
+    // }
+
     public static boolean findTripletSum(int arr[],int sum){
         for(int i=0;i<arr.length-2;i++){
-            int currentSum=0;
-            for(int j=i+1;j<arr.length-1;j++){
-                for(int k=j+1;k<arr.length;k++){
-                    currentSum=currentSum+arr[i]+arr[j]+arr[k];
-                    if(currentSum==sum){
-                        return true;
-                    }
-                    else{
-                        currentSum=0;
-                    }
+            int target=sum-arr[i];
+            int left=0;
+            int right=arr.length-1;
+            while(left<right){
+                if(arr[left]+ arr[right]==target){
+                    return true;
+                }
+                else if(arr[left] + arr[right] < target){
+                    left++;
+                }
+                else{
+                    right--;
                 }
             }
         }
         return false;
     }
+
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the size of the array");
