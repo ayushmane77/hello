@@ -116,7 +116,7 @@ public class sieveOfEratosthenes {
         Arrays.fill(arr, true);
         for(int i=2;i<=n;i++){
             if(isPrime(i)){
-                System.out.println(i);
+                System.out.print(i+" ");
                 for(int j=i*i;j<=n;j=j+i){
                     arr[j]=false;
                 }
