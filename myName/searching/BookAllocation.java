@@ -15,13 +15,13 @@ public class BookAllocation {
         }
         int low=Max;
         int high=sum;
-        while(low<=high){
+         while(low<=high){
             int mid=(low+high)/2;
-            if(isValid(arr,m,mid)){
+            if(isValid(arr,m,mid)){ // left side
                 ans=mid;
                 high=mid-1;
             }
-            else{
+            else{ // right side
                 low=mid+1;
             }
         }
