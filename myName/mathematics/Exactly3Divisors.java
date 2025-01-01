@@ -7,14 +7,14 @@ public class Exactly3Divisors {
     public static int exactly3Divisors(int n){
         int count=0;
         for(int i=2;i<=Math.sqrt(n);i++){
-            int flag=0;
+            boolean isPrime=true;
             for(int j=2;j<=Math.sqrt(i);j++){
                 if(i%j==0){
-                    flag=1;
+                    isPrime=false;
                     break;
                 }
             }
-            if(flag==0){
+            if(isPrime==true){
                 count++;
             }
         }
