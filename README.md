@@ -2,7 +2,7 @@
 
 
 
-Welcome to the Java Data Structures and Algorithms (DSA) Repository! This repository covers the fundamentals to advanced concepts in Java, including OOP principles, bit manipulation, arrays, strings, searching algorithms, math problems, and recursion. Whether you're a beginner looking to get started or an advanced learner aiming to deepen your knowledge, this repository has something for everyone.
+Welcome to the Java Data Structures and Algorithms (DSA) Repository! This repository covers the fundamentals to advanced concepts in Java, including OOP principles, bit manipulation, arrays, strings, searching algorithms, math problems, recursion, Sorting . Whether you're a beginner looking to get started or an advanced learner aiming to deepen your knowledge, this repository has something for everyone.
 
 # Getting Started
 
