@@ -1,6 +1,6 @@
 package myName;
 import java.util.Scanner;
-public class strings {
+public class StringOperations {
     
     public static void main(String[] args) {
         // String firstName="Ayush";
