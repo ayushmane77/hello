@@ -18,6 +18,9 @@ public class CountVowelsConsonant {
         }
         System.out.println(vowel);
         System.out.println(consonant);
+
+        String c=str.replaceAll("[aeiouAEIOU]", "");
+        System.out.println(c.length());
         sc.close();
     }
 }
