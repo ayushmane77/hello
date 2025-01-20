@@ -115,6 +115,52 @@ public class stringBuilders {
         // note
         // The indexOf() method returns the index of the first occurrence of the specified character or substring in the StringBuilder object. If the character or substring is not found, it returns -1.
         // the String.valueOf() method converts the character to a string.
-        
+
+        // Merge Two Strings Alternately: Given two strings, merge them alternately using StringBuilder.
+        // Input: "abc", "1234"
+        // Output: "a1b2c34"
+
+        String str1="abc";
+        String str2="1234";
+        int i=0,j=0;
+        boolean flag=true;
+        StringBuilder sb5=new StringBuilder("");
+        while(i<str1.length() && j<str2.length()){
+            if(flag){
+                sb5.append(str1.charAt(i));
+                i++;
+                flag=false;
+            }
+            else{
+                sb5.append(str2.charAt(j));
+                j++;
+                flag=true;
+            }
+        }
+        while(i<str1.length()){
+            sb5.append(str1.charAt(i));
+            i++;
+        }
+        while(j<str2.length()){
+            sb5.append(str2.charAt(j));
+            j++;
+        }
+        System.out.println(sb5);
+
+        //Remove Consecutive Duplicates: Write a program to remove consecutive duplicate characters using StringBuilder.
+        //Input: "aabbccdde"
+        // Output: "abcde"
+
+        String in="aabcbdecf";
+        StringBuilder process=new StringBuilder("");
+        StringBuilder output=new StringBuilder("");
+        for(int k=0;k<in.length();k++){
+            char c=in.charAt(k);
+            if(process.indexOf(String.valueOf(c))==-1){
+                output.append(c);
+                process.append(c);
+            }
+        }
+        System.out.println(output);
     }
 }
