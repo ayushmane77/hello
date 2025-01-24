@@ -64,15 +64,15 @@ public class ImpStringMethods {
         }
 
         // Write a Java program to extract all the words from a given sentence by splitting on spaces. Ignore extra spaces between words.
-        String str4=" Hello world this is java ";
-        String[] message = str4.split(" ");
+        String str4="  Hello world this is java ";
+        String[] message = str4.split("\\s+");
         for(String m: message){
             System.out.println(m);
         }
 
         // Write a Java program to split a single line of comma-separated values (CSV) into individual fields.
         String str5="Ayush,Mane,22,Software Engineer";
-        String[] info=str5.split(",");
+        String[] info=str5.split("\\,");
         for(String i:info){
             System.out.println(i);
         }
@@ -85,6 +85,10 @@ public class ImpStringMethods {
         for(char c:arr){
             System.out.println(c);
         }
+
+        String caps="WWW.example.com";
+        caps=caps.replaceAll("[.]", "-");
+        System.out.println(caps);
         sc.close();
     }
 }
