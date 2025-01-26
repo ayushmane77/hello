@@ -22,7 +22,10 @@ public class genericsAndWrapper {
         // It is just the reverse process of autoboxing. Automatically converting an object of the wrapper class to its corresponding 
         // primitive type is known as unboxing.
         int c=b;
+        int e=Integer.parseInt("456"); // the value of string will be converted to the possible integer primitive type.
+        System.out.println(e);
         System.out.println(c); 
+        
         sc.close();
     }
 }
