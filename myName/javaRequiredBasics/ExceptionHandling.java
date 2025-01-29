@@ -40,3 +40,23 @@ public class ExceptionHandling {
         sc.close();
     }
 }
+
+// // 1️⃣ Checked Exceptions (Compile-time Exceptions)
+// ✅ Definition:
+// Checked exceptions are exceptions that must be either handled using try-catch or declared using throws. If not handled, the program won't compile.
+
+// 📌 Characteristics:
+// Checked at compile-time.
+// Must be handled explicitly.
+// Mostly occurs due to external factors (e.g., I/O operations, database access).
+// exampke: IOException, SQLException, ClassNotFoundException, FileNotFoundException, etc.
+
+// // 2️⃣ Unchecked Exceptions (Runtime Exceptions)
+// ✅ Definition:
+// Unchecked exceptions occur during runtime and are usually caused by logical errors. These exceptions do not need explicit handling.
+
+// 📌 Characteristics:
+// Checked at runtime.
+// Extends RuntimeException class.
+// Usually caused by bugs in the code (e.g., invalid inputs, null references).
+// example: ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc.
