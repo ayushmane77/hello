@@ -31,12 +31,16 @@ public class ImpStringMethods {
         String contact="Contact me at 4533266031";
         System.out.println(contact.replaceAll("[0-9]", "*"));
 
+        String inp="AyushSaketTushar";
+        String replaceVowels=inp.replaceAll("[aeiouAEIOU]","");
+        System.out.println(replaceVowels);
+
         // Write a Java program to remove all special characters (non-alphanumeric) from a string
         String email="Hello@World!#2025#java";
         System.out.println(email.replaceAll("[^a-zA-Z0-9]", ""));
 
         // Write a Java program to replace all multiple spaces in a string with a single space.
-        String space="Hello  nice to  meet you  ";
+        String space="Hello   nice to  meet you  ";
         System.out.println(space.replaceAll("\\s+"," "));
 
         // Replaces all substrings that match a regular expression with a specified replacement string.
