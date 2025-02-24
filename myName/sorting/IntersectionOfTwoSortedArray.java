@@ -1,10 +1,12 @@
 package myName.sorting;
 import java.util.Scanner;
+
 public class IntersectionOfTwoSortedArray {
     // Naive approach
     // public static void CommonElements(int arr1[],int arr2[]){
     //     if(arr1.length>arr2.length){ // to make sure that arr1 is always smaller than arr2
     //         CommonElements(arr2, arr1); // if arr1 is greater than arr2 then we will swap the arrays
+    //         return;
     //     }
     //     int previousElement=-1; // to keep track of the previous element
     //     for(int i=0;i<arr1.length;i++){ // we will iterate through the first array
@@ -12,6 +14,7 @@ public class IntersectionOfTwoSortedArray {
     //             if(arr1[i]==arr2[j] && previousElement!=arr1[i]){ // if the element in the first array is equal to the element in the second array and the previous element is not equal to the current element
     //                 System.out.print(arr1[i] + " "); // then we will print the element
     //                 previousElement=arr1[i]; // and update the previous element
+    //                 break;
     //             }
     //         }
     //     } 
@@ -20,6 +23,27 @@ public class IntersectionOfTwoSortedArray {
     // Space complexity is O(1)
 
    //--------------------------------------------------------------
+
+
+   // Another naive approach
+//    public static void CommonElements(int arr1[],int arr2[]){
+//         if(arr1.length>arr2.length){
+//             CommonElements(arr2, arr1);
+//             return;
+//         }
+//         int previousElement=-1;
+//         for(int i=0;i<arr1.length;i++){
+//             if(arr1[i]!=previousElement){
+//                 for(int j=0;j<arr2.length;j++){
+//                     if(arr1[i]==arr2[j]){
+//                         System.out.print(arr1[i] + " ");
+//                         previousElement=arr1[i];
+//                         break;
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
     // Efficient approach
 
@@ -44,6 +68,9 @@ public class IntersectionOfTwoSortedArray {
     }
     // time complexity is O(n+m) where n is the size of the first array and m is the size of the second array
     // space complexity is O(1)
+    
+    
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the size of first array");
