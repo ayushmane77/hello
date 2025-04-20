@@ -6,7 +6,7 @@ public class Constructors {
 
     // 2)The two rules for creating a constructor are:
     // a. The name of the constructor should be the same as the class.
-    // b. A java constructor must have a return type.
+    // b. A java constructor must not  have a return type.
 
     // 3)If the class doesn't have a constructor , the java compiler 
     // automatically creates a default constructor during run-time. The 

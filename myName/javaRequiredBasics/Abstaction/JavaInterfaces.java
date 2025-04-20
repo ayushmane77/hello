@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 // Classes that implements an interface must provide implementation for all its methods.
 
-// Interfaces support multiple inheritance, which means a cladd can implement multiple interfaces.
+// Interfaces support multiple inheritance, which means a class can implement multiple interfaces.
 
 public class JavaInterfaces {
     public static void main(String[] args) {
