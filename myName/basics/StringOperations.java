@@ -1,4 +1,4 @@
-package myName;
+package myName.basics;
 import java.util.Scanner;
 public class StringOperations {
     

@@ -1,4 +1,4 @@
-package myName;
+package myName.basics;
 
 public class pattern2 {
     public static void main(String[] args) {

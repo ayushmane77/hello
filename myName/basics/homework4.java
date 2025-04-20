@@ -1,4 +1,4 @@
-package myName;
+package myName.basics;
 import java.util.*;
 public class homework4 {
     //Take an array of Strings input from the user & find the cumulative (combined) length of all those strings.

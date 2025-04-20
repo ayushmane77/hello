@@ -1,4 +1,4 @@
-package myName;
+package myName.basics;
 import java.util.Scanner;
 public class patterns {
     public static void main(String[] args) {

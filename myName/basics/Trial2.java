@@ -1,4 +1,4 @@
-package myName;
+package myName.basics;
 
 import myName.javaRequiredBasics.ProtectedUse;
 import myName.javaRequiredBasics.Trial;

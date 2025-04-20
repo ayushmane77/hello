@@ -1,4 +1,4 @@
-package myName;
+package myName.basics;
 
 public class advancepattern {
     public static void main(String[] args) {

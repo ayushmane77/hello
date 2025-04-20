@@ -1,4 +1,4 @@
-package myName;
+package myName.basics;
 import java.util.Scanner;
 public class homework2 {
 //     public static void Average(int num1,int num2,int num3){

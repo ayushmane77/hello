@@ -1,4 +1,4 @@
-package myName;
+package myName.basics;
 import java.util.Scanner;
 import java.lang.Math;
 public class functions {
