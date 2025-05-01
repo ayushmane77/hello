@@ -29,15 +29,19 @@ public class UnionOfTwoSortedArrays {
                 j++; // move to next element of arr2
             }
         }
-        while(i<arr1.length && previousElement!=arr1[i]){ // if arr2 is empty and arr1 has elements
-            System.out.print(arr1[i] + " "); // print the element
-            previousElement=arr1[i]; // update the previous element
-            i++; // move to next element of arr1
+        while(i<arr1.length){
+            if(arr1[i]!=previousElement){
+                System.out.print(arr1[i] + " ");
+                previousElement=arr1[i];
+            }
+            i++;
         }
-        while(j<arr2.length && previousElement!=arr2[j]){ // if arr1 is empty and arr2 has elements
-            System.out.print(arr2[j] + " "); // print the element
-            previousElement=arr2[j]; // update the previous element
-            j++; // move to next element of arr2
+        while(j<arr2.length){
+            if(arr2[j]!=previousElement){
+                System.out.print(arr2[j] + " ");
+                previousElement=arr2[j];
+            }
+            j++;
         }
     }
     public static void main(String[] args) {
