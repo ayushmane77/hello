@@ -22,16 +22,18 @@ public class CountOfSubArraySumEqualToK {
 
     // Optimized solution
     public static int TotalCountOfSubArraysSumEqualToK(int arr[],int k){
-        int count = 0;
-        HashMap<Integer,Integer> h = new HashMap<>();
-        h.put(0,1);
-        int prefixSum = 0;
+        int count = 0; // Initialize count of subarrays with sum equal to k
+        HashMap<Integer,Integer> h = new HashMap<>();// Using a HashMap to store the frequency of prefix sums
+        h.put(0,1);// Initialize the map with a prefix sum of 0, which accounts for subarrays that sum to k from the start
+        int prefixSum = 0;// Initialize prefix sum to 0
         for(int x: arr){
-            prefixSum = prefixSum + x;
-            if(h.containsKey(prefixSum-k)){
-                count = count + h.get(prefixSum-k);
+            prefixSum = prefixSum + x; // Update the prefix sum with the current element
+            if(h.containsKey(prefixSum-k)){// Check if there exists a prefix sum such that the difference with the current prefix sum equals k
+                // If such a prefix sum exists, it means there are subarrays that sum to k
+
+                count = count + h.get(prefixSum-k); // Increment count by the number of times this prefix sum has occurred
             }
-            h.put(prefixSum,h.getOrDefault(prefixSum, 0)+1);
+            h.put(prefixSum,h.getOrDefault(prefixSum, 0)+1); // Update the frequency of the current prefix sum in the HashMap
         }
         return count;
     }
