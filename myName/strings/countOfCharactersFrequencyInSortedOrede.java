@@ -1,8 +1,7 @@
-package myName.Hashing;
-// import java.util.HashMap;
+
+package myName.strings;
 import java.util.Scanner;
-// import java.util.Arrays;
-public class charactersFrequencyInSortedOrder {
+public class countOfCharactersFrequencyInSortedOrede {
 
     // public static void CharacterCountInSortedOrder(String str){
     //     HashMap<Character,Integer> h = new HashMap<>();
