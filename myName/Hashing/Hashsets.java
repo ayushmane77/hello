@@ -24,6 +24,7 @@ public class Hashsets {
         System.out.println(h.size()); // returns an int value of the size of the Hashets.
 
         h.remove(34); // removes the specified element from the hashets with the return type as boolean.
+        // h.removeAll(h); // removes all the characters from the hashset
         System.out.println(h.size());
 
         Iterator<Integer> i = h.iterator();
