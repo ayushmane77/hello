@@ -2,21 +2,42 @@ package myName.strings;
 import java.util.Scanner;
 public class NaivePatternSearching {
 
+    // public static void findIndexOfPattern(String txt, String ptt){  
+    //     for(int i=0;i<=txt.length()-ptt.length();i++){               
+    //         int j;
+    //         for(j=0;j<ptt.length();j++){
+    //             if(txt.charAt(i+j)!=ptt.charAt(j)){
+    //                 break;
+    //             }
+    //         }
+    //         if(j==ptt.length()){
+    //             System.out.println(i);
+    //         }
+    //     }
+    // }
+    // Time complexity : O((n-m+1)*m)
+
+    // Improved naive pattern searching , only for patterns which are distinct
     public static void findIndexOfPattern(String txt, String ptt){
-        int j = 0;
-        for(int i = 0;i<txt.length();i++){
-            if(txt.charAt(i)==ptt.charAt(j)){
-                if(j==ptt.length()-1){
-                    System.out.println(i-j);
-                    j=0;
+        for(int i=0;i<=txt.length()-ptt.length();){
+            int j;
+            for(j=0;j<ptt.length();j++){
+                if(txt.charAt(i+j)!=ptt.charAt(j)){
+                    break;
                 }
-                j++;
+            }
+            if(j==ptt.length()){
+                System.out.println(i);
+            }
+            if(j==0){
+                i++;
             }
             else{
-                j=0;
-            }    
+                i=i+j;
+            }
         }
-    } // only finds the index of first pattern found in original 'txt' string but misses other indexes pattern.
+    }
+    // Time complexity : O(N)
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the string");
