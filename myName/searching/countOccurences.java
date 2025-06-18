@@ -2,6 +2,7 @@ package myName.searching;
 import java.util.*;
 public class countOccurences {
 
+    // efficient approach
     public static int firstOccurence(int arr[],int x,int mid){
         int count=1;
         while(mid!=0 && arr[mid-1]==x){
@@ -41,6 +42,42 @@ public class countOccurences {
         }
         return count;
     }
+
+    // time complexity : O(logn)
+
+    // another approach
+     
+    // public static int findOccurence(int arr[],int x){
+    //     int count = 0;
+    //     int low = 0;
+    //     int high = arr.length-1;
+    //     while(low<=high){
+    //         int mid =  (low + high)/2;
+    //             if(arr[mid]==x){
+    //                 count++;
+    //                 int i = mid;
+    //                 int j = mid;
+    //                 while(i!=0 && arr[i-1]==x){
+    //                     count++;
+    //                     i--;
+    //                 }
+    //                 while(j!=arr.length-1 && arr[j+1]==x){
+    //                     count++;
+    //                     j++;
+    //                 }
+    //                 return count;
+    //             }
+    //             else if(arr[mid]<x){
+    //                 low = mid + 1;
+    //             }
+    //             else{
+    //                 high = mid - 1;
+    //             }
+    //     }
+    //     return count;
+    // }
+
+    // time complexity : O(logn + k) where k is the number of occurences
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the size of array");
