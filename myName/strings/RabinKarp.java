@@ -43,6 +43,7 @@ public class RabinKarp {
             }
         }
     }
+    // time complexity : O(n*m)
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the text string");
