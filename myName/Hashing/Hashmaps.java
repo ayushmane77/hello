@@ -35,6 +35,18 @@ public class Hashmaps {
         for(Map.Entry<String,Integer> m2 : m.entrySet()){
             System.out.println(m2.getKey() + " " +  m2.getValue());
         }
+
+        HashMap<Character, Character> h = new HashMap<>();
+        h.put('a','o');
+        h.put('b','h');
+        System.out.println(h.get('a'));
+        System.out.println(h.get('z')); // will return null value
+        if(h.containsKey('o')){
+            System.out.println(true);
+        }
+        else{
+            System.out.println(false);
+        }
         sc.close();
     }
 }
