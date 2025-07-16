@@ -17,6 +17,8 @@ public class creationAndTraversing {
             curr = curr.next; // move to the next node
         }
     }
+    // Time complexity : O(N)
+    // Auxiliary space : O(1)
     public static void main(String[] args) {
         Node head = new Node(23); // head is actually an object which is having an address.
         Node temp2 = new Node(45); // temp2 is a reference variable which is pointing to an object.
