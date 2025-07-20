@@ -72,8 +72,6 @@ public class InsertionAtGivenPosition {
             }
         }
         sc.close();
-        // why is the current file code not working?
-        // The code is working fine, but it seems you are trying to run it without providing the necessary input.
-        // Make sure to provide the input as expected by the program.
+        
     }
 }
