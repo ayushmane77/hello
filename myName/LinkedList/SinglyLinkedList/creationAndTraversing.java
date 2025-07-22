@@ -1,4 +1,4 @@
-package myName.LinkedList;
+package myName.LinkedList.SinglyLinkedList;
 
 class newNode{
     int data; // data field to store the value

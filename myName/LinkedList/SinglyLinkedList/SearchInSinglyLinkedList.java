@@ -1,4 +1,4 @@
-package myName.LinkedList;
+package myName.LinkedList.SinglyLinkedList;
 import java.util.Scanner;
 
 class nodeBirth{
